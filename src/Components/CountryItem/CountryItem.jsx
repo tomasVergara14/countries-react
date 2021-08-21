@@ -1,13 +1,14 @@
 import React from 'react'
+import './CountryItem.css'
 
 const CountryItem = ({name, flag, population, continent}) => {
     return (
-        <div>
+        <div className="CountryItemContainer">
             <h2>{name} </h2>
-            <div>
-                <img src={flag} alt="imagen" />
-                <h3>{continent} </h3>
-                <h3>{population} </h3>
+            <div className="CountryItemDetails">
+                <img className="ItemDetail" src={flag} alt="imagen" />
+                <h3 className="ItemDetail">Region: {continent} </h3>
+                <h3 className="ItemDetail">Population: {population} </h3>
             </div>
         </div>
     )

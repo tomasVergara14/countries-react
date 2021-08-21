@@ -1,0 +1,21 @@
+.CountryItemContainer{
+    display: flex;
+    flex-direction: column;
+}
+.CountryItemDetails{
+    margin: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.CountryItemDetails img{
+    width: 70%;
+}
+.CountryItemDetails h3{
+    margin-left: 15%;
+}
+.ItemDetail {
+    margin: 0%;
+    width: 100%;
+    text-align: start;
+}

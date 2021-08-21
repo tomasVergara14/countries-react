@@ -6,23 +6,34 @@ const CountryContainer = () => {
 
     
     const [country, setCountry]= useState([])
+    const [loading]= useState(true)
 
     useEffect(()=>{
         fetch(url)
         .then(res=>res.json())
         .then(data=>setCountry(data))
     },[])
-    console.log(country)
-    // {country.map((element, index)=>{
-    //     if(index<10){
-    //         return(
-
-    //         )
-    //     }
-    // })}
-    return(
-        <CountryItem name="hola" flag="" population="2021" continent="oeste" ></CountryItem>
-    )
+    if(country.length !==0){
+        return(
+            <div className="CountryContainer">
+                <h3>Countries</h3>
+                <div className="CountryMap">
+                    {country.map((element,index)=>{
+                        if(index<2){
+                            return(
+                                <CountryItem key={index} name={element.name} flag={element.flag} population={element.population} continent={element.region} />
+                            )
+                        }
+                    })}
+                </div>
+            </div>
+        )
+    }else{
+        return(
+            <div> {loading && <div className="spinner"></div>} </div>
+        )
+    }
+    
 }
 
 export default CountryContainer

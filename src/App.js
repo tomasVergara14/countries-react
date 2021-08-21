@@ -1,14 +1,13 @@
 import './App.css';
 import CountryContainer from './Components/CountryContainer/CountryContainer';
+import NavBar from './Components/NavBar/NavBar';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        
-          <p>Hello</p>
-          <CountryContainer></CountryContainer>
-        
+          <NavBar></NavBar>
+          <CountryContainer></CountryContainer>      
       </header>
     </div>
   );

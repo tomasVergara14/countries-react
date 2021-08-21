@@ -3,7 +3,7 @@ import './Title.css'
 
 const Title = () => {
     return (
-        <h1 className="HeaderTitle">Countries</h1>
+        <h1 className="HeaderTitle">API Countries</h1>
     )
 }
 

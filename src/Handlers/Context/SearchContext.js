@@ -28,7 +28,6 @@ const SearchContextProvider = ({children}) => {
         })
 
     }
-    console.log(searchCountry.countrySearch)
 
     const filterCountrySearch = country.filter(countryName=> countryName.name.toLowerCase() ==  searchCountry.countrySearch)
 

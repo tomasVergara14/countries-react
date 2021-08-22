@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import CountryItem from '../CountryItem/CountryItem'
 import { useSearchContext } from '../../Handlers/Context/SearchContext'
+import './CountryContainer.css'
 
 
 const CountryContainer = () => {
 
-    const [loading]= useState(true)
     const {LoadData, countryResult }= useSearchContext()
 
     useEffect(()=>{
@@ -15,7 +15,7 @@ const CountryContainer = () => {
     if(countryResult.length !== 0){
         return(
             <div className="CountryContainer">
-                <div className="CountryMap">
+                <div className="CountryMap" id="Result">
                     {countryResult.map((element,index)=>{
                         if(index<2){
                             return(
@@ -28,9 +28,8 @@ const CountryContainer = () => {
         )
     }else{
         return(
-            <div> 
-                {loading && <div className="spinner"></div>} 
-                <h3>Try again</h3>    
+            <div className="NotFound"> 
+                <h3>Enter the name of the country</h3>    
             </div>
         )
     }

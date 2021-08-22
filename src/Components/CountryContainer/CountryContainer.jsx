@@ -16,7 +16,6 @@ const CountryContainer = () => {
     if(country.length !==0){
         return(
             <div className="CountryContainer">
-                <h3>Countries</h3>
                 <div className="CountryMap">
                     {country.map((element,index)=>{
                         if(index<2){

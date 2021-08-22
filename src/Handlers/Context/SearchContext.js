@@ -29,7 +29,7 @@ const SearchContextProvider = ({children}) => {
 
     }
 
-    const filterCountrySearch = country.filter(countryName=> countryName.name.toLowerCase() ==  searchCountry.countrySearch)
+    const filterCountrySearch = country.filter(countryName=> countryName.name ==  searchCountry.countrySearch)
 
     const submitsHandler = (event)=>{
         event.preventDefault()

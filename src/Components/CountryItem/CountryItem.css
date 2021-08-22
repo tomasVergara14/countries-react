@@ -8,8 +8,13 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.ImageContainer{
+    margin: 10%;
+    background-color: rgb(49, 49, 49, 0.1)
+}
 .CountryItemDetails img{
-    width: 70%;
+    margin: 2%;
+    width: 95%;
 }
 .CountryItemDetails h3{
     margin-left: 15%;

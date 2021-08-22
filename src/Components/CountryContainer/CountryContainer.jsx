@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import CountryItem from '../CountryItem/CountryItem'
 
 const url = "https://restcountries.eu/rest/v2/all"
+
 const CountryContainer = () => {
 
     

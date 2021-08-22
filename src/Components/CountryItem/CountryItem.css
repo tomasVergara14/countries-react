@@ -1,6 +1,7 @@
 .CountryItemContainer{
     display: flex;
     flex-direction: column;
+    margin-bottom: 15%;
 }
 .CountryItemDetails{
     margin: 5%;

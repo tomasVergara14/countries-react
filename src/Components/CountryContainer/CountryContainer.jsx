@@ -1,19 +1,17 @@
 import React, {useEffect, useState} from 'react'
 import CountryItem from '../CountryItem/CountryItem'
+import { useSearchContext } from '../../Handlers/Context/SearchContext'
 
-const url = "https://restcountries.eu/rest/v2/all"
 
 const CountryContainer = () => {
 
-    
-    const [country, setCountry]= useState([])
     const [loading]= useState(true)
+    const {country, LoadData}= useSearchContext()
 
     useEffect(()=>{
-        fetch(url)
-        .then(res=>res.json())
-        .then(data=>setCountry(data))
+        LoadData()
     },[])
+    
     if(country.length !==0){
         return(
             <div className="CountryContainer">

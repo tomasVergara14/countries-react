@@ -6,12 +6,13 @@ import { useSearchContext } from '../../Handlers/Context/SearchContext'
 const CountryContainer = () => {
 
     const [loading]= useState(true)
-    const {country, LoadData}= useSearchContext()
+    const {country, LoadData, countryResult }= useSearchContext()
+    console.log(countryResult)
 
     useEffect(()=>{
         LoadData()
     },[])
-    
+
     if(country.length !==0){
         return(
             <div className="CountryContainer">

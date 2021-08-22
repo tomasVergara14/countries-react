@@ -8,6 +8,7 @@ const SearchContextProvider = ({children}) => {
 
     const [country, setCountry]= useState([])
     const [searchCountry, setSearchCountry]= useState({})
+    const [countryResult, setCountryResult]= useState([])
 
     const LoadData = async()=>{
         try{
@@ -27,19 +28,25 @@ const SearchContextProvider = ({children}) => {
         })
 
     }
-    console.log(searchCountry)
+    console.log(searchCountry.countrySearch)
+
+    const filterCountrySearch = country.filter(countryName=> countryName.name.toLowerCase() ==  searchCountry.countrySearch)
 
     const submitsHandler = (event)=>{
         event.preventDefault()
+        setCountryResult(filterCountrySearch)
     }
+    console.log(filterCountrySearch)
 
     return (    
         <SearchContext.Provider
         value={{
+            countryResult,
             country,
             LoadData,
             searchCountry,
-            changesHandler
+            changesHandler,
+            submitsHandler
         }}>
             {children}
         </SearchContext.Provider>

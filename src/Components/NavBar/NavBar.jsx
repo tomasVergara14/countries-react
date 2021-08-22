@@ -6,13 +6,13 @@ import { useSearchContext } from '../../Handlers/Context/SearchContext'
 
 const NavBar = () => {
 
-    const {searchCountry,changesHandler} =useSearchContext()
+    const {searchCountry,changesHandler, submitsHandler} =useSearchContext()
 
     return (
         <div className="NavBar">
             <Title/>
             <Logo/>
-            <Search  changes={changesHandler} submits="" countrySearch={searchCountry.countrySearch} />
+            <Search  changes={changesHandler} submits={submitsHandler} countrySearch={searchCountry.countrySearch} />
         </div>
     )
 }

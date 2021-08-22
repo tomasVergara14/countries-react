@@ -10,11 +10,14 @@ const SearchContextProvider = ({children}) => {
     const [searchCountry, setSearchCountry]= useState({})
 
     const LoadData = async()=>{
-        const url = "https://restcountries.eu/rest/v2/all"
-        const data = await (await fetch(url)).json()
-        setCountry(data)
+        try{
+            const url = "https://restcountries.eu/rest/v2/all"
+            const data = await (await fetch(url)).json()
+            setCountry(data)
+        }catch(err){
+            console.log(err)
+        }
     }
-    // console.log(LoadData())
     console.log(country)
 
     const changesHandler = (event)=>{

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSearchContext } from '../../Handlers/Context/SearchContext'
+import { NavLink } from 'react-router-dom'
 import CountryItem from '../CountryItem/CountryItem'
 
 const CountryListContainer = () => {
@@ -15,12 +16,15 @@ const CountryListContainer = () => {
         
         return(
             <div className="CountryListContainer">
+                
+                <h3>Names of the Countries</h3>
                 {country.map((element, index)=>{
-                    if(index<10){
-                        return(
-                            <CountryItem key={index} name={element.name} flag={element.flag} population={element.population} continent={element.region} />
-                        )
-                    }
+                   return(
+                       <div key={index}>
+                           <NavLink  to={`/detail/${element.name}`}  >{element.name}</NavLink>
+                       </div>
+                       
+                   )
                 })}
             </div>
         )

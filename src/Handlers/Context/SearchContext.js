@@ -34,7 +34,7 @@ const SearchContextProvider = ({children}) => {
         event.preventDefault()
         setCountryResult(filterCountrySearch)
     }
-    console.log(filterCountrySearch)
+
 
     return (    
         <SearchContext.Provider

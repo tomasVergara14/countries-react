@@ -18,13 +18,15 @@ const CountryContainer = () => {
      console.log(countryFilter)
 
 
-     if(countryResult.length !== 0){
+     if(countryResult.length !== 0 && countryFilter.length ===0 ){
         return(
             <div className="CountryContainer">
                 <div className="CountryMap" id="Result">
-                   
-                    <CountryItem key={countryFilter[0].name} name={countryFilter[0].name} flag={countryFilter[0].flag} population={countryFilter[0].population} continent={countryFilter[0].region} />
-                         
+                {countryResult.map((element,index)=>{
+                        return(
+                    <CountryItem key={element.name} name={element.name} flag={element.flag} population={element.population} continent={element.region} />
+                    )
+                })}
                 </div>
             </div>
         )

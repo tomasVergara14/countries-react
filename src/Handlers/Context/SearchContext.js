@@ -19,7 +19,6 @@ const SearchContextProvider = ({children}) => {
             console.log(err)
         }
     }
-    console.log(country)
 
     const changesHandler = (event)=>{
         setSearchCountry(

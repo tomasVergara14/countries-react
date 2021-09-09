@@ -1,5 +1,4 @@
 import React from 'react'
-import { useEffect } from 'react/cjs/react.development'
 import { useSearchContext } from '../../Handlers/Context/SearchContext'
 import CountryItem from '../CountryItem/CountryItem'
 
@@ -7,10 +6,7 @@ const CountryListContainer = () => {
 
     
     const { LoadData,country }= useSearchContext()
-
-    useEffect(()=>{
-        LoadData()
-    },[])
+    LoadData()
 
     console.log(country)
     if(country.length !==0){

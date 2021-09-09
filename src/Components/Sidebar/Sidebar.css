@@ -1,6 +1,5 @@
 .SidebarContainer{
     display: flex;
-    width: 30%;
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
@@ -15,6 +14,7 @@
 
 @media(min-width:685px){
     .SidebarContainer{
+        width: 30%;
         flex-direction: column;
         top: 100px;
         bottom: 100px;

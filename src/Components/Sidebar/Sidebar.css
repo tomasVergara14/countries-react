@@ -1,0 +1,15 @@
+.SidebarContainer{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    position: -webkit-sticky;
+    position: sticky;
+    justify-content: center;
+    top: 0px;
+    bottom: 0px;
+}
+.SidebarOption{
+    color: white;
+    margin: 2em 1em;
+    text-align: justify;
+}

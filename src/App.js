@@ -1,17 +1,28 @@
 import './App.css';
-import CountryContainer from './Components/CountryContainer/CountryContainer';
-import NavBar from './Components/NavBar/NavBar';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Main from './Components/Main/Main';
+import Sidebar from './Components/Sidebar/Sidebar';
+
 import SearchContextProvider from './Handlers/Context/SearchContext';
 
 function App() {
   return (
     <SearchContextProvider>
-    <div className="App">
-      <header className="App-header">
-          <NavBar/>
-          <CountryContainer/>      
-      </header>
-    </div>
+      <BrowserRouter>
+        <Switch>
+
+        <div className="App">
+          
+          <Sidebar/>
+          
+          <Route exact path="/">
+              <Main/>
+          </Route>
+
+        </div>
+    
+        </Switch>  
+      </BrowserRouter> 
     </SearchContextProvider>
   );
 }

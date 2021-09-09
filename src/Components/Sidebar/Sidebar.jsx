@@ -6,8 +6,8 @@ const Sidebar = () => {
     return (
         <div className="SidebarContainer">
             <NavLink className="SidebarOption" to="/" >Home</NavLink>
-            <NavLink className="SidebarOption" to="/">List of Countries</NavLink>
-            <NavLink className="SidebarOption" to="/">Countries</NavLink>
+            <NavLink className="SidebarOption" to="/list">List of Countries</NavLink>
+            <NavLink className="SidebarOption" to="/countriesFilter"> By Continents</NavLink>
         </div>
     )
 }

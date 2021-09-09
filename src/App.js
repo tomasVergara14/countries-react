@@ -10,7 +10,7 @@ function App() {
     <SearchContextProvider>
       <BrowserRouter>
         <Switch>
-
+        <>
         <div className="App">
           
           <Sidebar/>
@@ -18,9 +18,14 @@ function App() {
           <Route exact path="/">
               <Main/>
           </Route>
-
+          <Route exact path="/list">
+              <Main/>
+          </Route>
+          <Route exact path="/countriesFilter">
+              <Main/>
+          </Route>
         </div>
-    
+        </>
         </Switch>  
       </BrowserRouter> 
     </SearchContextProvider>

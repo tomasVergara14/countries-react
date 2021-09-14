@@ -2,19 +2,19 @@
 
 API Countries it´s a project build on React JS, created with the purpose of practicing Api fetch and different skills of a FrontEnd developer
 
-## Instalación
+## Installation
 
 Once the repository is cloned from https://github.com/tomasVergara14/countries-react
 
 You can run it by opening the console and standing on the folder, run the command:
 
-npm install
+> npm install
 
 to install all the dependencies, 
 
 once installed run the command:
 
-npm start
+> npm start
 
 And the project will run on the port:
 

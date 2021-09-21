@@ -35,7 +35,7 @@ const SearchContextProvider = ({children}) => {
     const capitalize = upper + rest
 
 
-    const filterCountrySearch = country.filter(countryName=> countryName.name ===  capitalize.countrySearch)
+    const filterCountrySearch = country.filter(countryName=> countryName.name ===  capitalize.countrySearch || countryName.name.toLowerCase() === searchCountry.countrySearch)
 
     const submitsHandler = (event)=>{
         event.preventDefault()

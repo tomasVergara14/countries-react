@@ -46,7 +46,7 @@ const SearchContextProvider = ({children}) => {
 
     // const capitlize = upper + 
 
-    const filterCountrySearch = country.filter(countryName=> countryName.name ===  searchCountry.countrySearch)
+    const filterCountrySearch = country.filter(countryName=>  countryName.name === searchCountry.countrySearch)
 
     const submitsHandler = (event)=>{
         event.preventDefault()

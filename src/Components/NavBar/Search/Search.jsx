@@ -8,7 +8,7 @@ const Search = ({countrySearch, changes, submits}) => {
             <form action="" onChange={changes} onSubmit={submits} >
                 <input 
                 type="text" 
-                placeholder="Search"
+                placeholder="Ex: Argentina"
                 name="countrySearch"
                 defaultValue={countrySearch}
                 />

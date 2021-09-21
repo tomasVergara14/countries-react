@@ -27,14 +27,24 @@ const SearchContextProvider = ({children}) => {
         })
 
     }
-
-    if(searchCountry.length !==0){
-        const lower = searchCountry.toLowerCase()
-        setSearchCountry(searchCountry.chartAt(0).toUpperCase() + lower.slice(1))
-        return searchCountry
-
-    }
     
+    const string = searchCountry.countrySearch
+    
+    console.log(string)
+    
+    // const lower = string.toLowerCase()
+    // console.log(lower)
+
+    // const firstLetter = string.charAt(0)
+    // console.log(firstLetter)
+
+    // const upper = firstLetter.toUpperCase()
+    // console.log(upper)
+
+    // const rest = string.slice(1)
+    // console.log(rest)
+
+    // const capitlize = upper + 
 
     const filterCountrySearch = country.filter(countryName=> countryName.name ===  searchCountry.countrySearch)
 

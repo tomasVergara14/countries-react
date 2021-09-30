@@ -12,13 +12,14 @@ const SearchContextProvider = ({children}) => {
 
     const LoadData = async()=>{
         try{
-            const url = "https://restcountries.eu/rest/v2/all"
+            const url = "https://restcountries.com/v3.1/all"
             const data = await (await fetch(url)).json()
             setCountry(data)
         }catch(err){
             console.log(err)
         }
     }
+    console.log(country.name)
 
     const changesHandler = (event)=>{
         setSearchCountry(
@@ -30,23 +31,11 @@ const SearchContextProvider = ({children}) => {
     
     const string = searchCountry.countrySearch
     
-    console.log(string)
+    const arrayName = country.map(element => element.name.common)
+    console.log(arrayName)
     
-    // const lower = string.toLowerCase()
-    // console.log(lower)
 
-    // const firstLetter = string.charAt(0)
-    // console.log(firstLetter)
-
-    // const upper = firstLetter.toUpperCase()
-    // console.log(upper)
-
-    // const rest = string.slice(1)
-    // console.log(rest)
-
-    // const capitlize = upper + 
-
-    const filterCountrySearch = country.filter(countryName=>  countryName.name === searchCountry.countrySearch)
+    const filterCountrySearch = arrayName.filter(countryName=>  countryName === searchCountry.countrySearch)
 
     const submitsHandler = (event)=>{
         event.preventDefault()

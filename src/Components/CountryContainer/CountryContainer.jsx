@@ -12,6 +12,7 @@ const CountryContainer = () => {
 
     useEffect(()=>{
         LoadData()
+        console.log(LoadData())
     },[])
 
      const countryFilter = country.filter(element=> element.name === id)

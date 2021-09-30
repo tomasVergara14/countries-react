@@ -21,7 +21,7 @@ const CountryListContainer = () => {
                 {country.map((element, index)=>{
                    return(
                        <div key={index} className="CountryLinksContainer">
-                           <NavLink className="CountryLink"  to={`/detail/${element.name}`}  >{element.name}</NavLink>
+                           <NavLink className="CountryLink"  to={`/detail/${element.name.common}`}  >{element.name.common}</NavLink>
                        </div>
                        
                    )

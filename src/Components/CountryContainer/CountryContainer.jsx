@@ -15,6 +15,8 @@ const CountryContainer = () => {
         console.log(LoadData())
     },[])
 
+    //esto se tiene que cambiar
+    
      const countryFilter = country.filter(element=> element.name === id)
      console.log(countryFilter)
 

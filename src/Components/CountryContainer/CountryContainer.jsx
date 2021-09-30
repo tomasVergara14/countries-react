@@ -24,7 +24,7 @@ const CountryContainer = () => {
                 <div className="CountryMap" id="Result">
                 {countryResult.map((element,index)=>{
                         return(
-                    <CountryItem key={element.name} name={element.name} flag={element.flag} population={element.population} continent={element.region} />
+                    <CountryItem key={element.name} name={element.name.common} flag={element.flags.svg} population={element.population} continent={element.region} />
                     )
                 })}
                 </div>

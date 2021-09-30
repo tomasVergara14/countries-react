@@ -29,13 +29,12 @@ const SearchContextProvider = ({children}) => {
 
     }
     
-    const string = searchCountry.countrySearch
-    
-    const arrayName = country.map(element => element.name.common)
-    console.log(arrayName)
-    
+    const inputSearch = searchCountry.countrySearch
 
-    const filterCountrySearch = arrayName.filter(countryName=>  countryName === searchCountry.countrySearch)
+    const filterCountrySearch = country.filter(countryName=>  countryName.name.common === inputSearch)
+
+    
+    console.log(filterCountrySearch)
 
     const submitsHandler = (event)=>{
         event.preventDefault()
